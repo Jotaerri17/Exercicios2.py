@@ -19,8 +19,13 @@
 
 #lista
 valores=[]
-valores.append(5)
-valores.append(10)
-valores.append(15)
-for c,v in enumerate(valores):
-    print(f'Na posição {c} econtrei o valor {v}!')
+for cont in range (1,5):
+    valores.append(int(input('Digite um valor: ')))
+a1= valores.index(max(valores))
+b1= valores.index(min(valores))
+print(valores)
+print(f'O maior valor foi {max(valores)} na posição {a1}')
+print(f'O menor valor foi {min(valores)} na posição {b1}')
+
+
+
