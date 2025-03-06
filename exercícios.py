@@ -90,3 +90,45 @@
 #    print('Sua expressão é valida!')
 #else:
 #    print('Sua expressão esta invalida.. Tente novamente!')
+
+
+#galera=[['João', '19'], ['gabriel', '17'], ['felipe', '18']]
+#for p in galera:
+#    print(f'{p[0]} tem {p[1]} anos de idade')
+
+#pessoas=list()
+#dado=list()
+#cont=0
+#while True:
+#    dado.append(str(input('Qual seu nome?:')))
+#    dado.append(int(input('Qual sua idade?:')))
+#    pessoas.append(dado[:])
+#    dado.clear()
+#    cont+=1
+#    maior=pessoas[0][1]
+#    menor=pessoas[0][1]
+#    c=str(input('Quer continuar? [S/N]') .upper())
+#    maior
+#    if c=='S':
+#       continue
+ #   else:
+#        print(f'Foram cadastradas {cont} pessoas')
+#        for pessoa in pessoas:
+#            idade=pessoa[1]
+#            if idade>maior:
+#                maior=idade
+#            if idade<menor:
+#                menor=idade
+#        break
+#print(f'A pessoas mais velha tem {maior} ')
+#print(f'A pessoas mais nova tem {menor} ')
+
+
+#numeros=[]
+#for n in range(0,7):
+#    num=(int(input('Digite um numero: ')))
+#    numeros.append(num)
+#    pares=sorted([num for num in numeros if num%2==0])
+#    impares=sorted([num for num in numeros if num%2!=0])
+#print(f'Os numeros pares digitados foram {pares}')
+#print(f'Os numeros impares digitados foram {impares}')
