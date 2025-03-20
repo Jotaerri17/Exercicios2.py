@@ -64,3 +64,47 @@
 #print(phone_num)
 
 
+# *args    = allows you to pass multiple non-key arguments
+# **kwargs = allowa you to pass multiple keywords-arguments
+#            * unpacking operator
+#            1. positional, 2. Default, 3. Keyword, 4. Arbitrary
+
+#def add(*args): #torna uma lista, pode ser usado qualquer nome contanto que tenha o (*)
+#    total=0
+#    for arg in args:
+#        total+=arg
+#    return total
+#print(add(1,2,3))
+
+
+#def print_address(**kwargs): #torna um dicionario
+#    for key,value in kwargs.items():
+#        print(f"{key}: {value}")
+#print_address(street="123 Fake St.",
+#              apt="104 nature",
+#              city="Springfield",
+#              state="IL",
+#              zip="62701")
+
+#def shipping_label(*args, **kwargs):
+#    for arg in args:
+#        print(arg,end=" ")
+#    print()
+#    if "apt" in kwargs:
+#         print(f"{kwargs.get('street')} {kwargs.get('apt')}")
+#    elif "pobox" in kwargs:
+#         print(f"{kwargs.get('street')} {kwargs.get('pobox')}")
+#    else:
+#         print(f"{kwargs.get('street')}")
+#    print(f" {kwargs.get('state')},{kwargs.get('city')},{kwargs.get('zip')}")
+
+#shipping_label("Dr.", "John", "Smith",
+#               street="123 Fake St.",
+#               pobox="104 nature",
+#               city="Springfield",
+#               state="IL",
+#               zip="62701")
+
+
+
+
