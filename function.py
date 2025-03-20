@@ -105,6 +105,20 @@
 #               state="IL",
 #               zip="62701")
 
+# Iterables = An object/collection that can return its elements
+#              one at a time, allowing it to be iterated over in a loop
+
+
+#n=int(input("Digite um numero:"))
+#def num_fac(n):
+ #   if n==0:
+ #       return 1
+ #   else:
+ #       resultado= n*num_fac(n-1)
+ #       return resultado
+#print(f"O fatorial de {n} é",num_fac(n))
+
+
 
 
 
