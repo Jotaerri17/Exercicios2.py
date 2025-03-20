@@ -118,6 +118,76 @@
  #       return resultado
 #print(f"O fatorial de {n} é",num_fac(n))
 
+#Membership operators = used to test whether a value or variable is found in a sequence
+#                       (string, list, tuple, set, or dictionary)
+#                       1. in   2. not in
+
+#word="APPLE"
+#etter=input("Guess a letter in the secret word")
+
+#if letter not in word:
+#    print(f"There is no {letter} in the secret word ")
+#else:
+#    print(f"There is a {letter} in the secret word ")
+
+#grades={"joao": "A",
+#        "maria": "B",
+#        "pedro": "A",
+#        "ana": "C"}
+#student=input("Enter the name of student:")
+#if student  in grades:
+#    print(f"{student} grade is {grades[student]}")
+#else:
+#    print(f"{student} is not in the database")
+
+#email="jotaerri@gmail.com"
+#if "@gmail" in email and ".com" in email:
+#    print("This is a gmail")
+#else:
+#    print("This is not a gmail")
+
+
+#List  comprehension = A concise way to create lists in Python
+#                      Compact and easier to read than traditional loops
+#                      [expression for value in iterable if condition]
+
+#doubles=[x*2 for x in range(1,11)]
+#triples=[y*3 for y in range(11,21)]
+#squares=[z*z for z in range(1,11)]
+
+#fruits= ["apple","banana","cherry","orange"]
+#fruit_chars=[fruit[0] for fruit in fruits]
+
+#numbers=[1,-2,-3,4,-5,6]
+#positive_nums=[num for num in numbers if num>=0]
+#negative_numbers=[num for num in numbers if num<0]
+#even_nums=[num for num in numbers if num % 2 == 0]
+#odd_nums=[num for num in numbers if num % 2 == 1]
+
+
+#grades=[85, 42,77,90, 69, 30, 17]
+#passing_grades = [grade for grade in grades if grade >=60]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
