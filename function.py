@@ -168,16 +168,86 @@
 #grades=[85, 42,77,90, 69, 30, 17]
 #passing_grades = [grade for grade in grades if grade >=60]
 
+#Match-case statement (switch): An alternative to using many "elif" statements
+#                               Execute some code if a value matches a "case"
+#                               Benefits: cleaner and syntaxx is more readable
+
+#def day_of_week(day):
+#    match day:
+#        case 1:
+#            return " It is Monday"
+#        case 2:
+#            return " It is Tuesday"
+#        case 3:
+#            return " It is Wednesday"
+#        case 4:
+#            return " It is Thursday"
+#        case 5:
+#            return " It is Friday"
+#        case _:  #botar case _ para substituir um else
+#            return " It is Invalid day"
+
+#print(day_of_week(5))
+
+#def day_of_week(day):
+#    match day:
+#        case "Sunday" | "Saturday": # or == |
+#            return True
+#        case "Monday" | "Tuesday" | "Wednesday" | "Thursday" | "Friday":
+#            return False
+#        case _:  #botar case _ para substituir um else
+#            return " It is Invalid day"
+
+#print(day_of_week("Monday"))
 
 
+#Module = a file containing code you want to include in your program use "import" to
+#         incluse a modulo (built-in or your own) useful to break up a large program
+#         reusalble separte files
+
+import exmodulo
+from exmodulo import circumference
+
+#pi= exmodulo.pi
+#result= exmodulo.square(3)
+#cube= exmodulo.cube(9)
+#circumference=exmodulo.circumference(10)
+#area=exmodulo.area(10)
+#print(-cube,-circumference,-area,-result)
 
 
+#Variable scope = where a variable is visible and accessible
+# scope resolution = (LEGB) Local -> Enclosed -> Global -> Built-in
+# Ordem de onde é puxada a variavel
+
+#from math import e
+
+#def func1():
+#    print(e)
+#e=3
+#func1()
 
 
+#def happy_birthday(name, age):
+#    print(f"Happy Birthday {name}!")
+#    print(f"You are {age} years old!")
+#def main():
+#    name="jotaerri"
+#    age= 19
+#    happy_birthday(name, age)
+#main()
 
+#if __name__ == __main__: (this script can be imported OR run standalone)
+#                         Functions and classes in this module can be reused
+#                         without the main block of code executing
 
+# ex.library = Import library for functionality
+#              When running library directly, display a help page
 
-
+#def main():
+    #Your program goes here
+#if __name__ == "__main__":
+#    main()
 
 
 
