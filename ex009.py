@@ -54,78 +54,105 @@
 
 # Python slot machine
 
-import random
-def spin_row():
-    symbols = ["🍒", "🍉", "🍋", "🔔", "💫"]
-    results=[]
-    return [ random.choice(symbols) for _ in range(3)]
-def print_row(row):
-    print("-=" * 7)
-    print(" | ".join(row))
-    print("-=" * 7)
-def get_payout(row,bet):
-    if row[0] == row[1] == row[2]:
-        if row[0] == "🍒":
-            return bet * 4
-        elif row[0]== "🍉":
-            return bet * 5
-        elif row[0]=="🍋":
-            return bet * 8
-        elif row[0]=="🔔":
-            return bet * 3
-        elif row[0]=="💫":
-            return bet * 20
-    return 0
-def main():
-    balance= 100
-    print("-=" *25)
-    print("Welcome to Python Slot Machine")
-    print("Symbols: 🍒 🍉 🍋 🔔 💫")
-    print("-=" * 25)
+#import random
+#def spin_row():
+#    symbols = ["🍒", "🍉", "🍋", "🔔", "💫"]
+#    results=[]
+#    return [ random.choice(symbols) for _ in range(3)]
+#def print_row(row):
+#    print("-=" * 7)
+#    print(" | ".join(row))
+#    print("-=" * 7)
+#def get_payout(row,bet):
+#    if row[0] == row[1] == row[2]:
+#        if row[0] == "🍒":
+#            return bet * 4
+#        elif row[0]== "🍉":
+#            return bet * 5
+#        elif row[0]=="🍋":
+#            return bet * 8
+#        elif row[0]=="🔔":
+#            return bet * 3
+#        elif row[0]=="💫":
+#            return bet * 20
+#    return 0
+#def main():
+#    balance= 100
+#    print("-=" *25)
+#    print("Welcome to Python Slot Machine")
+#    print("Symbols: 🍒 🍉 🍋 🔔 💫")
+#    print("-=" * 25)
 
-    while balance > 0:
-        print(f"Current balance is: ${balance: .2f}")
-        bet = input("Place your bet amount:").strip()
-        if  not bet.isdigit():
-            print("Please enter a valid number.")
-            continue
+#    while balance > 0:
+#        print(f"Current balance is: ${balance: .2f}")
+#        bet = input("Place your bet amount:").strip()
+#        if  not bet.isdigit():
+#            print("Please enter a valid number.")
+#            continue
 
-        bet= int(bet)
+#        bet= int(bet)
 
-        if bet > balance:
-            print("Insufficient funds. Please try again.")
-            continue
+#        if bet > balance:
+#            print("Insufficient funds. Please try again.")
+#            continue
 
-        if bet <=0:
-            print("Bet must be greater than 0. Please try again.")
-            continue
+#        if bet <=0:
+#            print("Bet must be greater than 0. Please try again.")
+#            continue
 
-        balance -= bet
+#        balance -= bet
 
-        row = spin_row()
-        print("Spinning...\n")
-        print_row(row)
+#        row = spin_row()
+#        print("Spinning...\n")
+#        print_row(row)
 
-        payout=get_payout(row,bet)
+#        payout=get_payout(row,bet)
 
-        if payout > 0:
-            print(f"You won ${payout: .2f}")
-        else:
-            print("Sorry, no winners this time.")
-        balance += payout
+#        if payout > 0:
+#            print(f"You won ${payout: .2f}")
+#        else:
+#            print("Sorry, no winners this time.")
+#        balance += payout
 
-        play_again= input("DO you want to play again? (yes/no): ").strip().lower()
-        if play_again != "yes":
-            print("Thank you for playing!")
-            break
+#        play_again= input("DO you want to play again? (yes/no): ").strip().lower()
+#        if play_again != "yes":
+#            print("Thank you for playing!")
+#            break
 
-    print("-=" * 25)
-    print(f"Game over! Your final balance is: ${balance: .2f}")
-    print("-=" * 25)
+#    print("-=" * 25)
+#   print(f"Game over! Your final balance is: ${balance: .2f}")
+#    print("-=" * 25)
 
-if __name__ == '__main__':
-    main()
-
-
+#if __name__ == '__main__':
+#    main()
 
 
+
+
+#import random
+#import string
+
+#chars=  " " + string.punctuation + string.ascii_letters + string.digits
+#chars = list(chars)
+#key = chars.copy()
+#random.shuffle(key) #Embaralha a lista de um modo diferente toda vez que é iniciado
+
+#Encrypt
+
+#plain_text = input("Enter a message to encrypt: ")
+#plain_text = plain_text.lower()
+#cipher_text = ""
+#for letter in plain_text:
+#    index = chars.index(letter)
+#    cipher_text += key[index] #Pega a posição da letra no chars e no no key e substitui
+#print(f"Original message: {plain_text}")
+#print(f"Your encrypted message is: {cipher_text}")
+
+
+#Decrypt
+#plain_text = ""
+#for letter in cipher_text:
+#    index = key.index(letter)
+#    plain_text += chars[index]
+#print(f"Encrypt message: {cipher_text}")
+#print(f"Your decrypted message is: {plain_text}")
