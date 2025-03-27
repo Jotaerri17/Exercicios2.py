@@ -156,3 +156,11 @@
 #    plain_text += chars[index]
 #print(f"Encrypt message: {cipher_text}")
 #print(f"Your decrypted message is: {plain_text}")
+
+
+# Hangman in python
+
+from wordslist import words
+import random
+
+hangman_art
