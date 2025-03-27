@@ -26,6 +26,37 @@ car2.stop()
 car1.describe()
 
 
+class Block:
+    def __init__(self, dimensions):
+        # Atributos de largura, comprimento e altura a partir da lista
+        self.width = dimensions[0]
+        self.length = dimensions[1]
+        self.height = dimensions[2]
+
+    def get_width(self):
+        return self.width
+
+    def get_length(self):
+        return self.length
+
+    def get_height(self):
+        return self.height
+
+    def get_volume(self):
+        return self.width * self.length * self.height
+
+    def get_surface_area(self):
+        return 2 * (self.width * self.length + self.width * self.height + self.length * self.height)
+
+
+b = Block([2, 4, 6])
+print(b.get_width())
+print(b.get_length())
+print(b.get_height())
+print(b.get_volume())
+print(b.get_surface_area())
+
+
 
 
 
