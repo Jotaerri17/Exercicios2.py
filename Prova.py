@@ -24,7 +24,7 @@ def cadastrar_funcionarios(): #Função referente ao cadrasto
         idade = input("Digite sua idade: ")
         cargo = input("Digite seu cargo: ") #Requisição dos dados#
 
-        funcionario = {"nome": nome, "idade": idade, "cargo": cargo} #Definição de cada varialvel
+        funcionario = {"nome": nome, "idade": idade, "cargo": cargo} #Definição de cada variavel
         funcionarios.append(funcionario) #Adiciona o funcionario a lista
 
         alternativa = input("Quer cadastrar mais um funcionarios? [S/N]: ").upper() # Escolha de adicionar outro funcionario
