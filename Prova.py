@@ -29,11 +29,11 @@ def cadastrar_funcionarios(): #Função referente ao cadrasto
 
         alternativa = input("Quer cadastrar mais um funcionarios? [S/N]: ").upper() # Escolha de adicionar outro funcionario
         if alternativa == "N":
-            break #Caso digite "N" ele para
+            break #Caso digite "N" ele para o loop
 
     print("\nFuncionários cadastrados:")
     for i, l in enumerate(funcionarios, start=1): #Enumera os funcionarios, começando em 1
-        print(f"{i}. Nome: {l['nome']}, Idade: {l['idade']}, Cargo: {l['cargo']}") #Mostra o Dado do funcionario
+        print(f"{i}. Nome: {l['nome']}, Idade: {l['idade']}, Cargo: {l['cargo']}") #Mostra os Dados do funcionario
 
 
 
