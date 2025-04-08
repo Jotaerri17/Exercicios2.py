@@ -2,7 +2,7 @@
 
 # 3-Positivo ou Negativo
 
-num=str(input("Digite um número: ")) #Requisição do numero
+num=int(input("Digite um número: ")) #Requisição do numero
 if num > 0:                          #Validações para o num
     print("O número é positivo 👌")
 elif num < 0:
