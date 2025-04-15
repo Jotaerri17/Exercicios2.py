@@ -95,8 +95,57 @@
 #fish = Fish("Nemo")
 
 
+# super() = Fuction used in a child class to call methods from a parent class(superclass)
+#           Allows you to extend the functionality of the inherited methods
 
 
+class Comum:
+    def __init__(self, color, filled):
+        self.color = color
+        self.filled = filled
+
+    def describe(self):
+        print(f"It is {self.color} and  {"filled" if self.filled else "unfilled"}.")
+
+class Circle(Comum):
+    def __init__(self, color, filled, radius):
+        super().__init__(color, filled)
+        self.radius = radius
+
+    def describe(self):
+        super().describe()
+        print(f"It is a circle with an area of {3.14 * (self.radius ** 2)}cm^2.")
+
+
+
+class Square(Comum):
+    def __init__(self, color, filled, width):
+        super().__init__(color, filled)
+        self.width = width
+
+    def describe(self):
+        super().describe()
+        print(f"It is a square with an area of {self.width * self.width}cm^2.")
+
+class Triangle(Comum):
+    def __init__(self, color, filled, width, heigth):
+        super().__init__(color, filled)
+        self.width = width
+        self.heigth = heigth
+
+    def describe(self):
+        super().describe()
+        print(f"It is a triangle with an area of {(self.heigth * self.width) / 2}cm^2.")
+
+circle = Circle('red', True, 5)
+square = Square(color='blue', filled=False, width=5)
+Triangle = Triangle('orange', False, 5, 5)
+print(f"{circle.color}, {circle.filled}, {circle.radius}cm")
+print(f"{square.color}, {square.filled}, {square.width}cm")
+print(f"{Triangle.color}, {Triangle.filled}, {Triangle.width}cm")
+Triangle.describe()
+circle.describe()
+square.describe()
 
 
 
