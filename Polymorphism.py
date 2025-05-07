@@ -90,31 +90,76 @@
 
 
 
-class Employee:
+# class Employee:
+#
+#     def __init__(self, name, position):
+#         self.name = name
+#         self.position = position
+#
+#     def get_info(self):
+#         return f"{self.name} = {self.position}"
+#
+#     @staticmethod
+#     def is_valid_position(position):
+#         valid_positions = ["Manager","Cashier","Cook","Janitor"]
+#         return position in valid_positions
+#
+#
+# employee1 = Employee("Eugene", "Manager")
+# employee2 = Employee("JR", "Cashier")
+# employee3 = Employee("Spongebob", "Cook")
+#
+# print(Employee.is_valid_position("Cook"))
+# print(employee1.get_info())
+# print(employee2.get_info())
+# print(employee3.get_info())
 
-    def __init__(self, name, position):
+
+
+
+# Class methods = Allow operations related to the class itself
+#                 Take (cls) as the first parameter, which represents the class itself
+
+
+class Student:
+
+    count = 0
+    total_gpa = 0
+
+    def __init__(self, name, gpa):
         self.name = name
-        self.position = position
+        self.gpa = gpa
+        Student.count += 1
+        Student.total_gpa += gpa
 
+    #INSTANCE METHOD
     def get_info(self):
-        return f"{self.name} = {self.position}"
+        return f"{self.name} {self.gpa}"
 
-    @staticmethod
-    def is_valid_position(position):
-        valid_positions = ["Manager","Cashier","Cook","Janitor"]
-        return position in valid_positions
+    @classmethod
+    def get_count(cls):
+        return f"Total # of students: {cls.count}"
 
-
-employee1 = Employee("Eugene", "Manager")
-employee2 = Employee("JR", "Cashier")
-employee3 = Employee("Spongebob", "Cook")
-
-print(Employee.is_valid_position("Cook"))
-print(employee1.get_info())
-print(employee2.get_info())
-print(employee3.get_info())
+    @classmethod
+    def get_average_gpa(cls):
+        if cls.count == 0:
+            return 0
+        else:
+            return f"{cls.total_gpa / cls.count:.2f}"
 
 
+student1 = Student("João", 4.8)
+student2 = Student("Pedro", 5.0)
+student3 = Student("Nath", 3.2)
+
+print(Student.get_count())
+print(Student.get_average_gpa())
+
+
+
+# Instance methods = Best for operations on instances of the class (objects)
+# Static methods = Best for utility functions that do not need access to class data
+# Class methods = best for class-level data or require access to the class itself
 
 
 
